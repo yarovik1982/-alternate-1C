@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Picture>
+	<PictureVariant name="tbgledit_85_ltr.png" screenDensity="bldpi" glyphWidth="14" glyphHeight="14" direction="ltr"/>
+	<PictureVariant name="tbgledit_100_ltr.png" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="ltr"/>
+	<PictureVariant name="tbgledit_125_ltr.png" screenDensity="aldpi" glyphWidth="20" glyphHeight="20" direction="ltr"/>
+	<PictureVariant name="tbgledit_150_ltr.png" screenDensity="mdpi" glyphWidth="24" glyphHeight="24" direction="ltr"/>
+	<PictureVariant name="tbgledit_175_ltr.png" screenDensity="amdpi" glyphWidth="28" glyphHeight="28" direction="ltr"/>
+	<PictureVariant name="tbgledit_200_ltr.png" screenDensity="hdpi" glyphWidth="32" glyphHeight="32" direction="ltr"/>
+	<PictureVariant name="tbgledit_300_ltr.png" screenDensity="xdpi" glyphWidth="48" glyphHeight="48" direction="ltr"/>
+	<PictureVariant name="tbgledit_400_ltr.png" screenDensity="udpi" glyphWidth="64" glyphHeight="64" direction="ltr"/>
+	<PictureVariant name="tbgledit_ltr.png" interfaceVariant="version8_2" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="ltr"/>
+	<PictureVariant name="tbgledit_ltr.png" interfaceVariant="version8_2_OrdinaryApp" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="ltr"/>
+	<PictureVariant name="tbgledit_old_ltr.png" interfaceVariant="version8_0" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="ltr"/>
+	<PictureVariant name="tbgledit_85_rtl.png" screenDensity="bldpi" glyphWidth="14" glyphHeight="14" direction="rtl"/>
+	<PictureVariant name="tbgledit_100_rtl.png" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="rtl"/>
+	<PictureVariant name="tbgledit_125_rtl.png" screenDensity="aldpi" glyphWidth="20" glyphHeight="20" direction="rtl"/>
+	<PictureVariant name="tbgledit_150_rtl.png" screenDensity="mdpi" glyphWidth="24" glyphHeight="24" direction="rtl"/>
+	<PictureVariant name="tbgledit_175_rtl.png" screenDensity="amdpi" glyphWidth="28" glyphHeight="28" direction="rtl"/>
+	<PictureVariant name="tbgledit_200_rtl.png" screenDensity="hdpi" glyphWidth="32" glyphHeight="32" direction="rtl"/>
+	<PictureVariant name="tbgledit_300_rtl.png" screenDensity="xdpi" glyphWidth="48" glyphHeight="48" direction="rtl"/>
+	<PictureVariant name="tbgledit_400_rtl.png" screenDensity="udpi" glyphWidth="64" glyphHeight="64" direction="rtl"/>
+	<PictureVariant name="tbgledit_rtl.png" interfaceVariant="version8_2" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="rtl"/>
+	<PictureVariant name="tbgledit_rtl.png" interfaceVariant="version8_2_OrdinaryApp" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="rtl"/>
+	<PictureVariant name="tbgledit_old_rtl.png" interfaceVariant="version8_0" screenDensity="ldpi" glyphWidth="16" glyphHeight="16" direction="rtl"/>
+</Picture>

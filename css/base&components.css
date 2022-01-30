@@ -14,10 +14,26 @@ ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
-
+/* служебный класс для скрытия сверстанных и неиспользуемых блоков */
 .none{
 	display: none;
 }
+
 body{
 	font-family: sans-serif;
+	min-width: 320px;
+}
+.container{
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.is-pict-32 {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.pointer{
+	cursor:pointer;
 }

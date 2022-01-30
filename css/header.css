@@ -1,0 +1,84 @@
+.header {
+   padding:5px 0;
+   background-color: rgb(26 222 122);
+   border-bottom: 1px solid rgba(0,0,0,.7);
+}
+.header__row {
+}
+.nav {
+}
+.header__top {
+   display: flex;
+   align-items: center;
+}
+.header__logo span {
+   font-size: 30px;
+   font-weight: 900;
+   color: rgba(0,0,0,.7);
+}
+.header__logo span:last-child{
+   text-shadow: 5px 0px rgba(0,0,0,.7);
+}
+.header__burger{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 12px;
+   align-items: center;
+   margin-left: 10px;
+}
+.header__burger span{
+   width: 90%;
+   height: 3px;
+   background-color:rgba(0,0,0,.7) ;
+}
+.header__serch {
+   margin-left: auto;
+   position: relative;
+}
+.header__serch::after{
+   position: absolute;
+   content: "";
+   background-image: url(../images/Найти/tbgledit_200_ltr.png);
+   width: 32px;
+   height: 32px;
+   top: 0;
+   left: 0;
+}
+.header__serch input{
+   width: 300px;
+   height: 35px;
+   border-radius: 5px;
+   padding-left: 35px;
+}
+.header__notification {
+   margin-left: 20px;
+}
+.header__history {
+   margin-left: 20px;
+}
+.header__favorites {
+   margin-left: 20px;
+}
+.header__function {
+   margin-left: 20px;
+   width: 32px;
+   height: 32px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+}
+.header__function span:not(:last-child){
+   width: 70%;
+   height: 2px;
+   background-color:rgba(0,0,0,.7) ;
+}
+.header__function span:last-child{
+   width: 0; 
+   height: 0;
+   border-left: 7px solid transparent;
+   border-right: 7px solid transparent;
+   border-top: 7px solid rgba(0,0,0,.7);
+
+}
