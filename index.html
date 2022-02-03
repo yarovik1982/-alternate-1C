@@ -4,39 +4,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="css/base&components.css">
+	<link rel="stylesheet" href="css/docs.css">
 	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/base&components.css">
+	<script src="js/script.js" defer type="module"></script>
+	<script src="js/modules/Function.js" defer type="module"></script>
 	<title>Document</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header header-top">
 		<div class="container">
 			<div class="header__row">
 				<div class="header__top">
 					<div class="header__logo">
-						<span>1</span>
+						<span>42</span>
 						<span>$</span>
 					</div>
-					<div class="header__burger is-pict-32" title="меню">
-						<!-- <span></span>
-						<span></span>
-						<span></span> -->
+					<div class="header__burger is-pict-32 hover" title="меню">
 						<img src="images/_moreThemes.svg" alt="">
 					</div>
 					<div class="header__serch">
 						<input type="text" placeholder="Поиск CTRL+SHIFT+F">
 					</div>
-					<div class="header__notification pointer" title="Оповещения">
+					<div class="header__notification pointer is-pict-32 hover" title="Оповещения">
 						<img src="images/_notify.svg" alt="">
 					</div>
-					
-					<div class="header__history pointer" title="История">
+					<div class="header__history pointer is-pict-32 hover" title="История">				
 						<img src="images/history_125.png" alt="">
 					</div>
-					<div class="header__favorites pointer" title="Избранное">
+					<div class="header__favorites pointer is-pict-32 hover " title="Избранное">
 						<img src="images/_favorite.svg" alt="">
 					</div>
-					<div class="header__function pointer" title="Сервис и настройки">
+					<div class="header__function pointer hover" title="Сервис и настройки">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -49,8 +48,128 @@
 		</div>
 	</header>
 
+	<div class="header-mid">
+		<div class="container">
+			<nav class="header-mid__nav">
+				<ul class="header-mid__list menu__list">
+					<li class="menu__item menu-mid">
+						<a href="#" class="menu__link">
+							<span class="menu__pict">
+								<img src="images/homeregular_106344.png" alt="">
+							</span>
+							<span class="menu__category">Главная</span>
+						</a>
+					</li>
+					<li class="menu__item menu-mid" id="my-fin">
+						<a href="#" class="menu__link">
+							<span class="menu__pict">
+								<img src="images/icon-vallet.png" alt="">
+							</span>
+							<span class="menu__category">Мои финансы</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
 
-	<script src="js/script.js"></script>
+	<div class="header-bottom visible"> <!--убрать класс visible-->
+		<div class="conainer">
+			<div class="header-bottom__row">
+				<ul class="header-bottom__menu menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Наличные средства
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Карты
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Справочник расходов
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Документы
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<section class="docs">
+		<div class="docs-header" id="docs-header">
+			<div class="container">
+
+				<div class="docs-header__row row">
+					<div class="row__buttons">
+						<button  class="row__btn">
+							<span class="row__arrow"><img src="images/btn-arrow-prev.svg" alt=""></span>
+						</button>
+						<button title="" class="row__btn">
+							<span class="row__arrow"><img src="images/btn-arrow-next.svg" alt=""></span>
+						</button>
+					</div>
+					<div class="row__title">Документ (новый)</div>
+					<div class="row__close">
+						<span class="row__close-icon is-pict-32 hover">&times;</span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="row__buttons">
+						<button title="Провести и закрыть" class="is-button bgc-orange" id="hold-close" data-evt="Провести и закрыть">
+							<span class="btn-text" data-evt="Провести и закрыть">Провести и закрыть</span>
+						</button>
+
+						<button title="Записать" class="is-button" id="write" data-evt="Записать">
+							<span class="btn-text" data-evt="Записать">Записать</span>
+						</button>
+
+						<button title="Провести" class="is-button" id="hold" data-evt="Провести">
+							<span class="btn-text" data-evt="Провести">Провести</span>
+						</button>
+					</div>
+					<div class="row__more">
+						<button title="Еще" class="is-button" id="more" data-evt="Еще">
+							<span class="btn-text" data-evt="Еще">Еще</span>
+							<span class="btn-arrow" data-evt="Еще"></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<label for="number" class="row__label">Номер
+						<input type="text" id="number" class="inp__number input-doc">
+					</label>
+				</div>
+				<div class="row">
+					<label for="date" class="row__label">Дата
+						<input type="date" id="date" class="inp__date input-doc">
+					</label>
+				</div>
+				<div class="row">
+					<label for="name" class="row__label">Название 
+						<input type="text" id="name" class="inp__name input-doc">
+					</label>
+				</div>
+			</div>
+		</div>
+	</section>
+	
 </body>
 </html>
 

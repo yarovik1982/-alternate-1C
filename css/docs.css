@@ -1,0 +1,73 @@
+.docs {
+   background-color: rgb(170, 170, 250);
+}
+
+.row {
+   padding: 5px 0px;
+   display: flex;
+   align-items: center;
+}
+.row__btn {
+   background-color: transparent;
+}
+.row__title {
+   margin-left: 30px;
+   font-size: 24px;
+    font-weight: 600;
+}
+.row__close {
+   margin-left: auto;
+}
+.row__close-icon {
+   width: 32px;
+    height: 32px;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+}
+.row__buttons {
+   display: flex;
+   align-items: center;
+}
+.row__buttons .is-button:not(:first-child){
+   margin-left: 10px;
+}
+.bgc-orange{
+   background-color: gold;
+}
+.btn-text {
+   font-size: 16px;
+}
+.row__more {
+   margin-left: auto;
+}
+.btn-arrow{
+   width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid rgba(0,0,0,.7);
+    margin-left: 10px;
+}
+.row__label {
+   width: 410px;
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+}
+.input-doc {
+   height: 30px;
+    padding: 5px;
+    margin-left: auto;
+    border-radius: 5px;
+}
+.inp__date {
+   width: 300px;
+}
+.inp__name {
+   width: 300px;
+}
+
+

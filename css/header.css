@@ -1,12 +1,9 @@
-.header {
+.header-top {
    padding:5px 0;
    background-color: rgb(26 222 122);
    border-bottom: 1px solid rgba(0,0,0,.7);
 }
-.header__row {
-}
-.nav {
-}
+
 .header__top {
    display: flex;
    align-items: center;
@@ -39,7 +36,7 @@
 .header__serch::after{
    position: absolute;
    content: "";
-   background-image: url(../images/Найти/tbgledit_200_ltr.png);
+   background-image: url(../images/tbgledit_200_ltr.png);
    width: 32px;
    height: 32px;
    top: 0;
@@ -81,4 +78,49 @@
    border-right: 7px solid transparent;
    border-top: 7px solid rgba(0,0,0,.7);
 
+}
+
+/* header-mid */
+.header-mid {
+   background-color: rgb(26 222 122);
+}
+.menu__list {
+   display: flex;
+   align-items: center;
+}
+.menu__item{
+   padding: 0 10px;
+   border-bottom: 1px solid transparent;
+}
+.menu__item.bgc-white{
+   background-color: #fff;
+   border-bottom: 1px solid rgb(26 222 122);
+}
+.menu__link {
+   display: flex;
+   align-items: center;
+   padding: 5px 0;
+}
+.menu__link:hover .menu__category{
+   border-bottom: 1px solid rgba(0,0,0,.7);
+}
+.menu__category {
+   color:rgba(0,0,0,.7) ;
+   padding: 3px 0;
+   border-bottom: 1px solid transparent;
+   font-size: 20px;
+   margin-left: 15px;
+}
+/* header-bottom */
+
+.header-bottom {
+   border-top: 1px solid rgba(0,0,0,.7);
+   border-bottom:  1px solid rgba(0,0,0,.7);
+   display: none;
+}
+.header-bottom.is-show{
+   display: block;
+}
+.visible{
+   display: block;
 }

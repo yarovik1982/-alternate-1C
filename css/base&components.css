@@ -33,7 +33,34 @@ body{
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hover:hover{
+	background: rgb(20, 170, 93);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
 }
 .pointer{
 	cursor:pointer;
+}
+.is-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding:3px 10px;
+   border-radius: 3px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   -ms-border-radius: 3px;
+   -o-border-radius: 3px;
+   border:1px solid rgba(0,0,0,.7) ;
+	box-shadow: 2px 2px 2px rgb(36, 64, 156);
+}
+.is-button:hover{
+	box-shadow:inset 2px 2px 2px rgb(36, 64, 156);
 }
