@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="css/tabular.css">
 	<link rel="stylesheet" href="css/docs.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/base&components.css">
@@ -21,24 +22,26 @@
 						<span>$</span>
 					</div>
 					<div class="header__burger is-pict-32 hover" title="меню">
-						<img src="images/moreThemes.svg" alt="">
+						<img src="images/svg.svg" alt="">
 					</div>
 					<div class="header__serch">
 						<input type="text" placeholder="Поиск CTRL+SHIFT+F">
 					</div>
-					<div class="header__notification pointer is-pict-32 hover" title="Оповещения">
-						<img src="images/notify.svg" alt="">
-					</div>
-					<div class="header__history pointer is-pict-32 hover" title="История">				
-						<img src="images/history_125.png" alt="">
-					</div>
-					<div class="header__favorites pointer is-pict-32 hover " title="Избранное">
-						<img src="images/favorite.svg" alt="">
-					</div>
-					<div class="header__function pointer hover" title="Сервис и настройки">
-						<span></span>
-						<span></span>
-						<span></span>
+					<div class="header__icons-group">
+						<div class="header__notification pointer is-pict-32 hover" title="Оповещения">
+							<img src="images/notify.svg" alt="">
+						</div>
+						<div class="header__history pointer is-pict-32 hover" title="История">				
+							<img src="images/history_125.png" alt="">
+						</div>
+						<div class="header__favorites pointer is-pict-32 hover " title="Избранное">
+							<img src="images/favorite.svg" alt="">
+						</div>
+						<div class="header__function pointer hover" title="Сервис и настройки">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -129,18 +132,23 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row" id="buttons-group">
+					<div class="row__buttons-group">
+						<buttons class="is-pict-32 bgc-orange is-button" data-evt="hold-close" title="Провести и закрыть"></buttons>
+						<buttons class="is-pict-32 bgc-orange is-button" data-evt="write" title="Записать"></buttons>
+						<buttons class="is-pict-32 bgc-orange is-button" data-evt="hold" title="Провести"></buttons>
+					</div>
 					<div class="row__buttons">
-						<button title="Провести и закрыть" class="is-button bgc-orange" id="hold-close" data-evt="Провести и закрыть">
-							<span class="btn-text" data-evt="Провести и закрыть">Провести и закрыть</span>
+						<button title="Провести и закрыть" class="is-button bgc-orange" id="hold-close" data-evt="hold-close">
+							<span class="btn-text" data-evt="hold-close">Провести и закрыть</span>
 						</button>
 
-						<button title="Записать" class="is-button" id="write" data-evt="Записать">
-							<span class="btn-text" data-evt="Записать">Записать</span>
+						<button title="Записать" class="is-button" id="write" data-evt="write">
+							<span class="btn-text" data-evt="write">Записать</span>
 						</button>
 
-						<button title="Провести" class="is-button" id="hold" data-evt="Провести">
-							<span class="btn-text" data-evt="Провести">Провести</span>
+						<button title="Провести" class="is-button" id="hold" data-evt="hold">
+							<span class="btn-text" data-evt="hold">Провести</span>
 						</button>
 					</div>
 					<div class="row__more">
@@ -151,25 +159,58 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<label for="number" class="row__label">Номер
-						<input type="text" id="number" class="inp__number input-doc">
-					</label>
-				</div>
-				<div class="row">
-					<label for="date" class="row__label">Дата
-						<input type="date" id="date" class="inp__date input-doc">
-					</label>
-				</div>
-				<div class="row">
-					<label for="name" class="row__label">Название 
-						<input type="text" id="name" class="inp__name input-doc">
-					</label>
-				</div>
+				<form action="#" class="docs__form" id="docs-form">
+					<div class="row">
+						<label for="input-number" class="row__label">Номер
+							<input type="text" id="input-number" class="inp__number input-doc" autocomplete="off">
+						</label>
+					</div>
+					<div class="row">
+						<label for="input-date" class="row__label">Дата
+							<input type="text" id="input-date" class="inp__date input-doc" value="" >
+						</label>
+					</div>
+					<div class="row">
+						<label for="input-name" class="row__label">Название 
+							<input type="text" id="input-name" class="inp__name input-doc" value="">
+						</label>
+					</div>
+					<div class="row">
+						<button class="is-button" title="Добавить (inset)" id="add" data-evt="Добавить">
+							<span class="btn-text" data-evt="Добавить">Добавить</span>
+						</button>
+					</div>
+				</form>
+
 			</div>
 		</div>
 	</section>
+
+	<section class="tabular">
+		<div class="tabular-head">
+			
+		</div>
+		<div class="tabular-body">
+			<div class="container">
+				<!-- <div class="tabular-body-inner"> -->
+					<div class="tabular-item" id="tabular">
+						<div class="tabular-row" id="tabular-header">
+							<div class="tabular-col tabular-number-str">№</div>
+							<div class="tabular-col tabular-name" >Наименование</div>
+							<div class="tabular-col tabular-amount" >Количество</div>
+							<div class="tabular-col tabular-price" >Цена</div>
+							<div class="tabular-col tabular-sum" >Сумма</div>
+						</div>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+		<div class="tabular-footer">
+			<div class="container"></div>
+		</div>
+	</section>
 	
+		
 </body>
 </html>
 

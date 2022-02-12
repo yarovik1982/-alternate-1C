@@ -1,0 +1,9 @@
+<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <line stroke="#4D4D4D" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="5.79472" x2="25" y1="5.79472" x1="3" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="14.7351" x2="25" y1="14.7351" x1="3" stroke="#4D4D4D" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="23.01322" x2="25" y1="23.01322" x1="3" stroke="#4D4D4D" fill="none"/>
+ </g>
+</svg>

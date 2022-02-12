@@ -1,0 +1,52 @@
+.tabular {
+   display: flex;
+   flex-direction: column;
+   max-height: 100%;
+   height: calc(100% - 405px);
+   /* min-height: auto; */
+}
+
+.tabular-item {
+}
+.tabular-row {
+   display: flex;
+   /* justify-content: space-between; */
+   align-items: center;
+   margin-bottom: 2px;
+}
+.tabular-col {
+   text-align: center;
+   border: 1px solid rgba(0,0,0,.7);
+   padding: 5px 0;
+}
+.tabular-col:focus{
+   background-color: rgb(190, 184, 245);
+}
+.tabular-col:first-child{
+   width: 8%;
+}
+.tabular-col:not(:first-child){
+   width: 23%;
+}
+.tabular-body {
+   overflow-y: auto;
+    flex: 1 1 auto;
+    
+}
+.tabular-footer {
+   position: fixed;
+   width: 100%;
+   bottom: 0;
+   height: 26px;
+   background-color: rgb(26 222 122);
+}
+.tabular-number-str {
+}
+.tabular-name {
+}
+.tabular-amount {
+}
+.tabular-price {
+}
+.tabular-sum {
+}
