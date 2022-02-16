@@ -4,13 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="css/tabular.css">
-	<link rel="stylesheet" href="css/docs.css">
-	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/base&components.css">
-	<script src="js/script.js" defer type="module"></script>
-	<script src="js/modules/Function.js" defer type="module"></script>
-	<title>Document</title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/pop-up.css">
+	<script src="js/modules/Registration.js" defer></script>
+	<!-- <script src="js/modules/main.js" defer type="module"></script> -->
+	<title>42$ Главняа</title>
 </head>
 <body>
 	<header class="header header-top">
@@ -21,200 +20,86 @@
 						<span>42</span>
 						<span>$</span>
 					</div>
-					<div class="header__burger is-pict-32 hover" title="меню">
-						<img src="images/svg.svg" alt="">
-					</div>
-					<div class="header__serch">
-						<input type="text" placeholder="Поиск CTRL+SHIFT+F">
-					</div>
-					<div class="header__icons-group">
-						<div class="header__notification pointer is-pict-32 hover" title="Оповещения">
-							<img src="images/notify.svg" alt="">
-						</div>
-						<div class="header__history pointer is-pict-32 hover" title="История">				
-							<img src="images/history_125.png" alt="">
-						</div>
-						<div class="header__favorites pointer is-pict-32 hover " title="Избранное">
-							<img src="images/favorite.svg" alt="">
-						</div>
-						<div class="header__function pointer hover" title="Сервис и настройки">
-							<span></span>
-							<span></span>
-							<span></span>
+					<div class="header__user">
+						<div class="header__user-buttons">
+							<a href="#login" class="header__user-btn is-button" id="btn-login" data-id="login">
+								<span class="btn-text">Вход</span>
+							</a>
+							<a href="#registr" class="header__user-btn is-button" id="btn-registr" data-id="registr">
+								<span class="btn-text">Регистрация</span>
+							</a>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="header__row">
-				<nav class="nav"></nav>
 			</div>
 		</div>
 	</header>
-
-	<div class="header-mid">
-		<div class="container">
-			<nav class="header-mid__nav">
-				<ul class="header-mid__list menu__list">
-					<li class="menu__item menu-mid">
-						<a href="#" class="menu__link">
-							<span class="menu__pict">
-								<img src="images/homeregular_106344.png" alt="">
-							</span>
-							<span class="menu__category">Главная</span>
-						</a>
-					</li>
-					<li class="menu__item menu-mid" id="my-fin">
-						<a href="#" class="menu__link">
-							<span class="menu__pict">
-								<img src="images/icon-vallet.png" alt="">
-							</span>
-							<span class="menu__category">Мои финансы</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-
-	<div class="header-bottom visible"> <!--убрать класс visible-->
-		<div class="conainer">
-			<div class="header-bottom__row">
-				<ul class="header-bottom__menu menu__list">
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							<span class="menu__category">
-								Наличные средства
-							</span>
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							<span class="menu__category">
-								Карты
-							</span>
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							<span class="menu__category">
-								Справочник расходов
-							</span>
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							<span class="menu__category">
-								Документы
-							</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<section class="docs">
-		<div class="docs-header" id="docs-header">
-			<div class="container">
-
-				<div class="docs-header__row row">
-					<div class="row__buttons">
-						<button  class="row__btn">
-							<span class="row__arrow"><img src="images/btn-arrow-prev.svg" alt=""></span>
-						</button>
-						<button title="" class="row__btn">
-							<span class="row__arrow"><img src="images/btn-arrow-next.svg" alt=""></span>
-						</button>
-					</div>
-					<div class="row__title">Документ (новый)</div>
-					<div class="row__close">
-						<span class="row__close-icon is-pict-32 hover">&times;</span>
-					</div>
-				</div>
-
-				<div class="row" id="buttons-group">
-					<div class="row__buttons-group">
-						<buttons class="is-pict-32 bgc-orange is-button" data-evt="hold-close" title="Провести и закрыть"></buttons>
-						<buttons class="is-pict-32 bgc-orange is-button" data-evt="write" title="Записать"></buttons>
-						<buttons class="is-pict-32 bgc-orange is-button" data-evt="hold" title="Провести"></buttons>
-					</div>
-					<div class="row__buttons">
-						<button title="Провести и закрыть" class="is-button bgc-orange" id="hold-close" data-evt="hold-close">
-							<span class="btn-text" data-evt="hold-close">Провести и закрыть</span>
-						</button>
-
-						<button title="Записать" class="is-button" id="write" data-evt="write">
-							<span class="btn-text" data-evt="write">Записать</span>
-						</button>
-
-						<button title="Провести" class="is-button" id="hold" data-evt="hold">
-							<span class="btn-text" data-evt="hold">Провести</span>
-						</button>
-					</div>
-					<div class="row__more">
-						<button title="Еще" class="is-button" id="more" data-evt="Еще">
-							<span class="btn-text" data-evt="Еще">Еще</span>
-							<span class="btn-arrow" data-evt="Еще"></span>
-						</button>
-					</div>
-				</div>
-
-				<form action="#" class="docs__form" id="docs-form">
-					<div class="row">
-						<label for="input-number" class="row__label">Номер
-							<input type="text" id="input-number" class="inp__number input-doc" autocomplete="off">
-						</label>
-					</div>
-					<div class="row">
-						<label for="input-date" class="row__label">Дата
-							<input type="text" id="input-date" class="inp__date input-doc" value="" >
-						</label>
-					</div>
-					<div class="row">
-						<label for="input-name" class="row__label">Название 
-							<input type="text" id="input-name" class="inp__name input-doc" value="">
-						</label>
-					</div>
-					<div class="row">
-						<button class="is-button" title="Добавить (inset)" id="add" data-evt="Добавить">
-							<span class="btn-text" data-evt="Добавить">Добавить</span>
-						</button>
-					</div>
-				</form>
-
+	<section class="rules">
+		<div class='box'>
+			<svg class="box__bg">
+				<mask id='m' fill='#fff'>
+					<rect id='r' width='100%' height='100%' />
+					<circle id='c' r='30' fill='#000' />
+					<use xlink:href='#c' x='100%' />
+					<use xlink:href='#c' y='100%' />
+					<use xlink:href='#c' x='100%' y='100%' />
+				</mask>
+				<use xlink:href='#r'  mask='url(#m)' />
+			</svg>
+			<div class="box__content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam hic quibusdam provident nemo, debitis animi laboriosam ipsa commodi omnis expedita magni repellat cum eaque rem beatae molestiae nam necessitatibus, earum sequi. Molestiae ab dolor earum repellendus, sunt doloremque mollitia ea! Cupiditate blanditiis maxime veniam nisi. Ad dolores consequuntur iure atque possimus, deleniti quibusdam voluptatem officiis accusamus, cupiditate qui autem veritatis unde quam placeat ea totam repellat architecto eaque nihil. Necessitatibus temporibus quam non? Consectetur autem, sint voluptas vero non odit in doloremque eaque explicabo accusantium quas alias dolore nostrum temporibus aspernatur facilis ex nesciunt aut minima veniam reiciendis architecto laboriosam. Minima officiis a eligendi possimus soluta, vitae ducimus maiores eaque.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam hic quibusdam provident nemo, debitis animi laboriosam ipsa commodi omnis expedita magni repellat cum eaque rem beatae molestiae nam necessitatibus, earum sequi. Molestiae ab dolor earum repellendus, sunt doloremque mollitia ea! Cupiditate blanditiis maxime veniam nisi. Ad dolores consequuntur iure atque possimus, deleniti quibusdam voluptatem officiis accusamus, cupiditate qui autem veritatis unde quam placeat ea totam repellat architecto eaque nihil. Necessitatibus temporibus quam non? Consectetur autem, sint voluptas vero non odit in doloremque eaque explicabo accusantium quas alias dolore nostrum temporibus aspernatur facilis ex nesciunt aut minima veniam reiciendis architecto laboriosam. Minima officiis a eligendi possimus soluta, vitae ducimus maiores eaque.
 			</div>
 		</div>
 	</section>
 
-	<section class="tabular">
-		<div class="tabular-head">
-			
+	<div class="popup none" id="popup">
+		<div class="popup__item" id="registr">
+			<form action="#" class="popup__form">
+				<div class="popup__form-row">
+					<span class="popup__form-registration">Регистрация</span>
+					<span class="popup__form-close pointer">&times;</span>
+				</div>
+				<div class="popup__form-row">
+					<input type="text" name="input-name" id="input-name-r" placeholder="Username" class="popup__input" autocomplete="off" title="Введите не менее трех символов, допускаются любые символы">
+				</div>
+				<div class="popup__form-row" data-pass="true"> <!--comment NOT DELETE ! ! !  -->
+					<input type="password" name="input-pass" id="input-pass-r" placeholder="Password" class="popup__input" title="Ввести не менее четыпех любых символов">
+					<a href="#" class="password-control"></a>
+				</div>
+				<div class="popup__form-row" data-pass="true"> <!--comment NOT DELETE ! ! !  -->
+					<input type="password" name="input-pass" id="input-dblpass-r" placeholder="Duplicate password" class="popup__input">
+					<a href="#" class="password-control"></a>
+				</div>
+				<div class="popup__form-row">
+					<button class="popup__form-btn" data-btn="registr">Регистрация</button>
+				</div>
+			</form>
 		</div>
-		<div class="tabular-body">
-			<div class="container">
-				<!-- <div class="tabular-body-inner"> -->
-					<div class="tabular-item" id="tabular">
-						<div class="tabular-row" id="tabular-header">
-							<div class="tabular-col tabular-number-str">№</div>
-							<div class="tabular-col tabular-name" >Наименование</div>
-							<div class="tabular-col tabular-amount" >Количество</div>
-							<div class="tabular-col tabular-price" >Цена</div>
-							<div class="tabular-col tabular-sum" >Сумма</div>
-						</div>
-					</div>
-				<!-- </div> -->
-			</div>
+
+		<div class="popup__item" id="login">
+			<form action="#" class="popup__form">
+				<div class="popup__form-row">
+					<span class="popup__form-registration">Вход</span>
+					<span class="popup__form-close pointer">&times;</span>
+				</div>
+				<div class="popup__form-row error"> <!--the error class changes the background of the incoming, in the case of an incorrect entry-->
+					<input type="text" name="input-name" id="input-name" placeholder="Username" class="popup__input" autocomplete="off">
+				</div>
+				<div class="popup__form-row error" data-pass="true"> <!--the error class changes the background of the incoming, in the case of an incorrect entry-->
+					<input type="password" name="input-pass" id="input-pass" placeholder="Password" class="popup__input" autocomplete="off">
+					<a href="#" class="password-control"></a>
+				</div>
+				<div class="popup__form-row">
+					<button class="popup__form-btn" data-btn="login">Вход</button>
+				</div>
+			</form>
 		</div>
-		<div class="tabular-footer">
-			<div class="container"></div>
-		</div>
-	</section>
-	
-		
+	</div>
 </body>
 </html>
 
 
-
+<!--  -->
 
 

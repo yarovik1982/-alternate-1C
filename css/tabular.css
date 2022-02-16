@@ -40,13 +40,6 @@
    height: 26px;
    background-color: rgb(26 222 122);
 }
-.tabular-number-str {
-}
-.tabular-name {
-}
-.tabular-amount {
-}
-.tabular-price {
-}
-.tabular-sum {
+[data-roll="row"]{
+   cursor: pointer;
 }

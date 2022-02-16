@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=560, initial-scale=1.0">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="css/tabular.css">
+	<link rel="stylesheet" href="css/docs.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/base&components.css">
+	<script src="js/script.js" defer type="module"></script>
+	<script src="js/modules/Function.js" defer type="module"></script>
+	<title>42$ App</title>
+</head>
+<body>
+	<header class="header header-top">
+		<div class="container">
+			<div class="header__row">
+				<div class="header__top">
+					<div class="header__logo">
+						<span>42</span>
+						<span>$</span>
+					</div>
+					<div class="header__burger is-pict-32 hover" title="меню">
+						<img src="images/svg.svg" alt="">
+					</div>
+					<div class="header__serch">
+						<input type="text" placeholder="Поиск CTRL+SHIFT+F">
+					</div>
+					<div class="header__icons-group">
+						<div class="header__notification pointer is-pict-32 hover" title="Оповещения">
+							<img src="images/notify.svg" alt="">
+						</div>
+						<div class="header__history pointer is-pict-32 hover" title="История">				
+							<img src="images/history_125.png" alt="">
+						</div>
+						<div class="header__favorites pointer is-pict-32 hover " title="Избранное">
+							<img src="images/favorite.svg" alt="">
+						</div>
+						<div class="header__function pointer hover" title="Сервис и настройки">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__row">
+				<nav class="nav"></nav>
+			</div>
+		</div>
+	</header>
+
+	<div class="header-mid">
+		<div class="container">
+			<nav class="header-mid__nav">
+				<ul class="header-mid__list menu__list">
+					<li class="menu__item menu-mid">
+						<a href="#" class="menu__link">
+							<span class="menu__pict">
+								<img src="images/homeregular_106344.png" alt="">
+							</span>
+							<span class="menu__category">Главная</span>
+						</a>
+					</li>
+					<li class="menu__item menu-mid" id="my-fin">
+						<a href="#" class="menu__link">
+							<span class="menu__pict">
+								<img src="images/icon-vallet.png" alt="">
+							</span>
+							<span class="menu__category">Мои финансы</span>
+						</a>
+					</li>
+					<li class="menu__item menu-mid" id="my-doc-list">
+						<a href="#" class="menu__link" title="Клик по контекстной кнопке мыши - вызов меню">
+							<span class="menu__pict">
+								<img src="#" alt="">
+							</span>
+							<span class="menu__category">Список документов</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="header-bottom visible"> <!--убрать класс visible-->
+		<div class="container">
+			<div class="header-bottom__row">
+				<ul class="header-bottom__menu menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Наличные средства
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Карты
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Справочник расходов
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link contextmenu" title="Клик по контекстной кнопке мыши - вызов меню">
+							<span class="menu__category">
+								Документы
+							</span>
+							<ul class="contextmenu__list">
+								<li class="contextmenu__item">Потребление электроэнергии</li>
+							</ul>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<section class="docs">
+		<div class="docs-header" id="docs-header">
+			<div class="container">
+
+				<div class="docs-header__row row">
+					<div class="row__buttons">
+						<button  class="row__btn">
+							<span class="row__arrow"><img src="images/btn-arrow-prev.svg" alt=""></span>
+						</button>
+						<button title="" class="row__btn">
+							<span class="row__arrow"><img src="images/btn-arrow-next.svg" alt=""></span>
+						</button>
+					</div>
+					<div class="row__title">Документ (новый)</div>
+					<div class="row__close">
+						<span class="row__close-icon is-pict-32 hover">&times;</span>
+					</div>
+				</div>
+
+				<div class="row" id="buttons-group">
+					<div class="row__buttons-group">
+						<buttons class="is-pict-32 bgc-orange is-button" data-evt="hold-close" title="Провести и закрыть"></buttons>
+						<buttons class="is-pict-32 bgc-orange is-button" data-evt="write" title="Записать"></buttons>
+						<buttons class="is-pict-32 bgc-orange is-button" data-evt="hold" title="Провести"></buttons>
+					</div>
+					<div class="row__buttons">
+						<button title="Провести и закрыть" class="is-button bgc-orange" id="hold-close" data-evt="hold-close">
+							<span class="btn-text" data-evt="hold-close">Провести и закрыть</span>
+						</button>
+
+						<button title="Записать" class="is-button" id="write" data-evt="write">
+							<span class="btn-text" data-evt="write">Записать</span>
+						</button>
+
+						<button title="Провести" class="is-button" id="hold" data-evt="hold">
+							<span class="btn-text" data-evt="hold">Провести</span>
+						</button>
+					</div>
+					<div class="row__more">
+						<button title="Еще" class="is-button" id="more" data-evt="more">
+							<span class="btn-text" data-evt="more">Еще</span>
+							<span class="btn-arrow" data-evt="more"></span>
+						</button>
+					</div>
+				</div>
+
+				<form action="#" class="docs__form" id="docs-form">
+					<div class="row">
+						<label for="input-number" class="row__label">Номер
+							<input type="text" id="input-number" class="inp__number input-doc" autocomplete="off">
+						</label>
+					</div>
+					<div class="row">
+						<label for="input-date" class="row__label">Дата
+							<input type="text" id="input-date" class="inp__date input-doc" value="" >
+						</label>
+					</div>
+					<div class="row">
+						<label for="input-name" class="row__label">Название 
+							<input type="text" id="input-name" class="inp__name input-doc" value="">
+						</label>
+					</div>
+					<div class="row">
+						<button class="is-button" title="Добавить (inset)" id="add" data-evt="Добавить">
+							<span class="btn-text" data-evt="Добавить">Добавить</span>
+						</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="tabular">
+		<div class="tabular-head">
+			
+		</div>
+		<div class="tabular-body">
+			<div class="container">
+				<!-- <div class="tabular-body-inner"> -->
+					<div class="tabular-item" id="tabular">
+						<div class="tabular-row" id="tabular-header">
+							<div class="tabular-col tabular-number-str">№</div>
+							<div class="tabular-col tabular-name" >Наименование</div>
+							<div class="tabular-col tabular-amount" >Количество</div>
+							<div class="tabular-col tabular-price" >Цена</div>
+							<div class="tabular-col tabular-sum" >Сумма</div>
+						</div>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+		<div class="tabular-footer">
+			<div class="container"></div>
+		</div>
+	</section>
+
+	<div class="warning">
+		<span>&times;</span>
+		<h2>Внимание</h2>
+		<p>Для корректного отображения используйте устройство с шириной экрана не менее 568px.</p>
+	</div>
+	
+		
+</body>
+</html>
+
+
+
+
+

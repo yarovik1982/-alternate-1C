@@ -17,6 +17,23 @@
 .header__logo span:last-child{
    text-shadow: 5px 0px rgba(0,0,0,.7);
 }
+/* login.html */
+.header__user-buttons {
+   display: flex;
+   align-items: center;
+   
+}
+.header__user-btn:last-child{
+   margin-left: 10px;
+}
+.header__user-btn{
+   background-color: rgb(166, 248, 166);
+   /* border: none; */
+   color:black;
+}
+
+
+
 .header__burger{
    display: flex;
    flex-direction: column;

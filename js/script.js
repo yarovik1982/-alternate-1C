@@ -2,6 +2,7 @@ const init = () => {
    // const menuLinks = document.querySelectorAll(".menu__link");
    const menuItems = document.querySelectorAll(".menu-mid");
    const menuFin = document.querySelector("#my-fin");
+   const warning = document.querySelector(".warning");
 
    menuItems.forEach(item =>{
       item.addEventListener("click", (event)=>{
@@ -23,7 +24,5 @@ const init = () => {
          menu.classList.remove("is-show");
       }
    }
-   
-   
 }
 init();

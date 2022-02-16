@@ -3,6 +3,9 @@ const FormFilling = ()=>{
    const inputTitle = document.getElementById("input-name");
    const inputsValue = document.querySelectorAll(".input-doc");
    const btnAll = document.querySelectorAll("[data-evt]");
+   const linkList = document.querySelectorAll(".menu__link");
+   const container = document.querySelector("#tabular");
+   
    
 
    const showDate = ()=> {
@@ -15,16 +18,17 @@ const FormFilling = ()=>{
    showDate();
 
    const doc = {
-      number: null,
-      date: null,
-      title: null,
-      write:null,//записан
-      hold:null,//проведен
+      "number": null,
+      "date": null,
+      "title": null,
+      "write":null,//записан
+      "hold":null,//проведен
    };
 
 const Document = {
    documents:  
-      [ localStorage.getItem("documents") || []],
+            JSON.parse(localStorage.getItem("documents")) || [],
+      // [localStorage.getItem("documents")],
    
    getWriteDocs : ()=>{
       return this.document.filter(({write}) => write == true);
@@ -34,6 +38,7 @@ const Document = {
    },
    
    saveDoc : function ({number,date,title}){
+      localStorage.setItem("documents",JSON.stringify([]));
       this.documents.push({number,date,title, write:true, hold:false});
       localStorage.setItem("documents", JSON.stringify(this.documents));
    },
@@ -45,24 +50,11 @@ const Document = {
       });
   },
   saveAndHoldDoc : () => {
-     this.saveDoc();
+     this.saveDoc(doc);
      this.changeBool();
   },
    };
    
-   // const getForm = ()=>{
-      // let arr = [];
-      // for(let i = 0; i < inputsValue.length; i++){
-      //    arr.push(inputsValue[i].value)
-      // }
-      // doc.number = inputNumber.value;
-      // doc.date = showDate();
-      // doc.title = inputTitle.value;
-      // console.log(doc);
-   // }
-   // getForm({doc})
-
-   // btnAll.forEach(btn => {
       document.addEventListener("click", event => {
          const currentBtn = event.target;
          if(currentBtn.dataset.evt === "write"){
@@ -71,42 +63,55 @@ const Document = {
             doc.title = inputTitle.value;
             inputNumber.value = "";
             inputTitle.value = "";
-            // getForm(doc);
             Document.saveDoc(doc);
          }
-         if(currentBtn.dataset.evt === "hold"){
-            
+         if(currentBtn.dataset.evt === "more"){
+            autoNum();
          }
       })
-   // })
-   
-   
-   
+
+       function autoNum  (){
+         const array = JSON.parse(localStorage.getItem("documents"));
+         if(array === null || array.length === 0){ 
+         inputNumber.value = 1;
+      } else {
+         inputNumber.value = array.length;
+      }
+         return array;
+      }
+      
+
+      linkList.forEach(link => {
+         link.addEventListener("click", event => {
+            event.preventDefault();
+            const element = event.target;
+            if(element.closest("#my-doc-list")){
+               document.getElementById("buttons-group").style.display = "none";
+               document.getElementById("docs-form").style.display = "none";
+               document.getElementById("tabular-header").remove();
+               document.querySelector(".row__title").textContent = "";
+               document.querySelector(".row__title").textContent = "Список документов";
+               renderData()
+            }
+         })
+      })
+
+      function renderData(){
+         let docsList = autoNum();
+         console.log(docsList);
+         docsList.forEach((item) => {
+            container.insertAdjacentHTML("beforeend",
+                                                      `<div class="tabular-row" data-roll="row">
+                                                         <div class="tabular-col">${item.number}</div>
+                                                         <div class="tabular-col">${item.date}</div>
+                                                         <div class="tabular-col">${item.title}</div>
+                                                      </div>`
+            )
+         })
+         
+      }
 }
 export default FormFilling;
 
 
-// writeDoc : function (){
-   //    document.addEventListener("click", event => {
-   //       const el = event.target;
-   //       if(el.dataset.evt === "write"){
-   //          this.saveDoc(doc);
-   //          inputNumber.value = "";
-   //          inputTitle.value = "";
-   //       }
-   //       setAutoNum();
-   //    })
-   // },
 
-   // const setAutoNum = function () {
-   //    const array = localStorage.getItem("documents");
-   //    let arrNum = [];
-   //    if(array === null){
-   //       inputNumber.value = 1;
-   //       arrNum.push(inputNumber.value);
-   //    }else {
-   //       inputNumber.value = arrNum.length + 1;
-   //       arrNum.push(inputNumber.value);
-   //    }
-   //    console.log(arrNum);
-   // }

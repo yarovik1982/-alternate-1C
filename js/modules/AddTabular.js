@@ -42,15 +42,17 @@ const AddTabular = () => {
    }
 
    class CreateHtmlElement  { // динамически создает строку табличной части
-      constructor(element, cssClass, string){
+      constructor(element, cssClass, string, dataAttr){
       this.htmlElement = element;
       this.cssClass = cssClass;
       this.html = string;
+      
    }
    renderElement(){
       const item = document.createElement(this.htmlElement);
       item.className = this.cssClass;
       item.innerHTML = this.html;
+      item.setAttribute("data-roll", "row")
 
       tabular.appendChild(item);
    }
