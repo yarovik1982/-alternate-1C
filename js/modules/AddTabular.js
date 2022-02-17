@@ -3,8 +3,8 @@ const AddTabular = () => {
    const tabular = document.getElementById("tabular");
    const tabularBody = document.querySelector(".tabular-body");
    
-   
-   function incrementNumber(){  //  нумерует строки
+   //  нумерует строки
+   function incrementNumber(){  
       const tabularRow = tabularBody.querySelectorAll(".tabular-row");
       let number = tabularRow.length;
       const lastItem = tabularRow[tabularRow.length- 1];
@@ -12,7 +12,8 @@ const AddTabular = () => {
       tabularNumberStr.textContent = number - 1;
    }
 
-   docsHeader.addEventListener("click", event => { // клик по кнопке "Добавить" -> добавляет строку
+ // клик по кнопке "Добавить" -> добавляет строку
+   docsHeader.addEventListener("click", event => {
       const btn = event.target;
       if(btn.dataset.evt == "Добавить"){
          row.renderElement()
@@ -21,8 +22,9 @@ const AddTabular = () => {
          deletionMark();
       }
    });
-
-   document.addEventListener("keydown", (event)=>{ // таб по клавише "insert" добавляет строку
+   
+// таб по клавише "insert" добавляет строку
+   document.addEventListener("keydown", (event)=>{ 
       if(event.code === "Insert"){
          row.renderElement()
          incrementNumber();

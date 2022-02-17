@@ -56,7 +56,7 @@
 			<nav class="header-mid__nav">
 				<ul class="header-mid__list menu__list">
 					<li class="menu__item menu-mid">
-						<a href="#" class="menu__link">
+						<a href="#" class="tab menu__link tab-active" data-href="main">
 							<span class="menu__pict">
 								<img src="images/homeregular_106344.png" alt="">
 							</span>
@@ -64,19 +64,19 @@
 						</a>
 					</li>
 					<li class="menu__item menu-mid" id="my-fin">
-						<a href="#" class="menu__link">
+						<a href="#" class="tab menu__link" data-href="finances">
 							<span class="menu__pict">
 								<img src="images/icon-vallet.png" alt="">
 							</span>
 							<span class="menu__category">Мои финансы</span>
 						</a>
 					</li>
-					<li class="menu__item menu-mid" id="my-doc-list">
-						<a href="#" class="menu__link" title="Клик по контекстной кнопке мыши - вызов меню">
+					<li class="menu__item menu-mid">
+						<a href="#" class="tab menu__link" title="Клик по контекстной кнопке мыши - вызов меню" data-href="documents">
 							<span class="menu__pict">
-								<img src="#" alt="">
+								<img src="images/Documents4848.png" alt="">
 							</span>
-							<span class="menu__category">Список документов</span>
+							<span class="menu__category">Документы</span>
 						</a>
 					</li>
 				</ul>
@@ -87,7 +87,25 @@
 	<div class="header-bottom visible"> <!--убрать класс visible-->
 		<div class="container">
 			<div class="header-bottom__row">
-				<ul class="header-bottom__menu menu__list">
+
+				<ul data-href="main" class="tab-content header-bottom__menu menu__list tab-content--active">
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Настройки
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Конфигуратор
+							</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul data-href="finances" class="tab-content header-bottom__menu menu__list none">
 					<li class="menu__item">
 						<a href="#" class="menu__link">
 							<span class="menu__category">
@@ -117,6 +135,33 @@
 							<ul class="contextmenu__list">
 								<li class="contextmenu__item">Потребление электроэнергии</li>
 							</ul>
+						</a>
+					</li>
+				</ul>
+
+				<ul data-href="documents" class="tab-content header-bottom__menu menu__list none">
+					<li class="menu__item" id="documents-registr">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Журнал документов
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link contextmenu" title="Клик по контекстной кнопке мыши - вызов меню">
+							<span class="menu__category">
+								Стандартные документы
+							</span>
+							<ul class="contextmenu__list">
+								<li class="contextmenu__item">Потребление электроэнергии</li>
+							</ul>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							<span class="menu__category">
+								Документы пользователя
+							</span>
 						</a>
 					</li>
 				</ul>

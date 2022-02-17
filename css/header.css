@@ -156,6 +156,12 @@
 .visible{
    display: block;
 }
+.tab-content {
+   display: none;
+}
+.tab-content.tab-content--active{
+   display: flex;
+}
 
 /* media */
 @media (max-width:582px){

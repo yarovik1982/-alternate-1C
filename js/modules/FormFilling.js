@@ -57,6 +57,7 @@ const Document = {
    
       document.addEventListener("click", event => {
          const currentBtn = event.target;
+         autoNum();
          if(currentBtn.dataset.evt === "write"){
             doc.number = inputNumber.value;
             doc.date = showDate();
@@ -66,7 +67,6 @@ const Document = {
             Document.saveDoc(doc);
          }
          if(currentBtn.dataset.evt === "more"){
-            autoNum();
          }
       })
 
@@ -75,7 +75,7 @@ const Document = {
          if(array === null || array.length === 0){ 
          inputNumber.value = 1;
       } else {
-         inputNumber.value = array.length;
+         inputNumber.value = array.length + 1;
       }
          return array;
       }
@@ -85,10 +85,10 @@ const Document = {
          link.addEventListener("click", event => {
             event.preventDefault();
             const element = event.target;
-            if(element.closest("#my-doc-list")){
+            if(element.closest("#documents-registr")){
                document.getElementById("buttons-group").style.display = "none";
                document.getElementById("docs-form").style.display = "none";
-               document.getElementById("tabular-header").remove();
+               // document.getElementById("tabular-header").remove();
                document.querySelector(".row__title").textContent = "";
                document.querySelector(".row__title").textContent = "Список документов";
                renderData()
