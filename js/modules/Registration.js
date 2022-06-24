@@ -40,7 +40,7 @@ const Registration = () => {
 
    loginButton.addEventListener("click", (event)=> {
       event.preventDefault();
-      const usersList = Users.userAll();
+      const usersList = Users.userAll;
       const dataInput = {
          userName : inputLoginName.value,
          userPass : inputLoginPass.value,
