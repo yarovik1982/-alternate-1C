@@ -23,16 +23,10 @@ const Registration = () => {
       userAll : JSON.parse(localStorage.getItem("users")) || [], 
 
       writeUser : function ({userName, userPass}){
-         // localStorage.setItem("users",JSON.stringify([]));
          this.userAll.push({userName, userPass});
          localStorage.setItem("users", JSON.stringify(this.userAll));
       },
-      // assignDefaultUser : function ({userName, userPass}) {
-      //    // this.userAll.push({userName:"user", userPass: "1111"});
-      //    localStorage.setItem("users", JSON.stringify({userName : "user", userPass : "1111"}))
-      // },
    }
-   // Users.assignDefaultUser(user);
    
    registrationButton.addEventListener("click", event => {
       event.preventDefault();
@@ -46,14 +40,14 @@ const Registration = () => {
 
    loginButton.addEventListener("click", (event)=> {
       event.preventDefault();
-      const usersList = Users.userAll;
+      const usersList = Users.userAll();
       const dataInput = {
          userName : inputLoginName.value,
          userPass : inputLoginPass.value,
       };
       usersList.forEach(item => {
          if(item.userName === dataInput.userName && item.userPass === dataInput.userPass){
-            loc.pathname = "/application.html";
+            loc.pathname = "./application.html";
          }else {
             document.querySelectorAll(".error").forEach(item => {
                item.style.backgroundColor = "red";
@@ -70,7 +64,6 @@ const Registration = () => {
    })
 
    function showPassword(target){
-      // const input = target.previousSibling;
       const parent = target.parentElement;
       const childs = parent.childNodes;
       const current = childs[3];
