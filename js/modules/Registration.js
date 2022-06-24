@@ -43,6 +43,7 @@ const Registration = () => {
 
    loginButton.addEventListener("click", (event)=> {
       event.preventDefault();
+      console.log(loc)
 //       const usersList = Users.userAll;
       const usersList = Users.getUsersList();
       const dataInput = {
