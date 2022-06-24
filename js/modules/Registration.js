@@ -13,7 +13,7 @@ const Registration = () => {
    const inputs = document.querySelectorAll(".popup__input");
    const closePopupBtn = document.querySelector(".popup__form-close");
    
-   // создание объекта , запись данных для входо в локальное хранилище
+   // создание объекта , запись данных для входа в локальное хранилище
    const user = {
       userName : "",
       userPass : "",
@@ -25,6 +25,9 @@ const Registration = () => {
       writeUser : function ({userName, userPass}){
          this.userAll.push({userName, userPass});
          localStorage.setItem("users", JSON.stringify(this.userAll));
+      },
+      getUsersList: function () {
+         return this.userAll;
       },
    }
    
@@ -40,7 +43,8 @@ const Registration = () => {
 
    loginButton.addEventListener("click", (event)=> {
       event.preventDefault();
-      const usersList = Users.userAll;
+//       const usersList = Users.userAll;
+      const usersList = Users.getUsersList();
       const dataInput = {
          userName : inputLoginName.value,
          userPass : inputLoginPass.value,
