@@ -43,7 +43,7 @@ const Registration = () => {
 
    loginButton.addEventListener("click", (event)=> {
       event.preventDefault();
-      console.log(loc)
+     
 //       const usersList = Users.userAll;
       const usersList = Users.getUsersList();
       const dataInput = {
@@ -52,7 +52,7 @@ const Registration = () => {
       };
       usersList.forEach(item => {
          if(item.userName === dataInput.userName && item.userPass === dataInput.userPass){
-            loc.pathname = "./application.html";
+            loc.pathname = loc.pathname + "application.html";
          }else {
             document.querySelectorAll(".error").forEach(item => {
                item.style.backgroundColor = "red";
