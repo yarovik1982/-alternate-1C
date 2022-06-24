@@ -52,7 +52,8 @@ const Registration = () => {
       };
       usersList.forEach(item => {
          if(item.userName === dataInput.userName && item.userPass === dataInput.userPass){
-            loc.pathname = loc.pathname + "application.html";
+//             loc.pathname = loc.pathname + "application.html";
+            window.location.pathname = "/application.html"
          }else {
             document.querySelectorAll(".error").forEach(item => {
                item.style.backgroundColor = "red";
